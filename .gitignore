@@ -13,3 +13,8 @@ frontend/dist/
 Thumbs.db
 .vscode/
 .idea/
+
+# Build / env
+*.tsbuildinfo
+.env
+.env.*
