@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: vidapdf-hospitalar
+    runtime: docker
+    plan: free
+    healthCheckPath: /api/health
+    autoDeploy: true
+    envVars:
+      - key: PYTHONUNBUFFERED
+        value: "1"

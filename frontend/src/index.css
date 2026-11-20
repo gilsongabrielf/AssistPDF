@@ -1,0 +1,56 @@
+@import "tailwindcss";
+@import "./styles/tokens.css";
+
+@layer base {
+  html {
+    font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background-color: var(--bg-canvas);
+    color: var(--text-primary);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: "Plus Jakarta Sans", "Inter", system-ui, sans-serif;
+  }
+}
+
+.btn-primary-cta {
+  background: var(--crimson-600);
+  color: #ffffff;
+  box-shadow: var(--shadow-cta);
+  transition: all 0.18s ease;
+}
+
+.btn-primary-cta:hover:not(:disabled) {
+  background: var(--crimson-700);
+  transform: translateY(-1px);
+}
+
+.btn-primary-cta:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.btn-teal {
+  background: var(--teal-600);
+  color: #ffffff;
+  transition: all 0.18s ease;
+}
+
+.btn-teal:hover:not(:disabled) {
+  background: var(--teal-700);
+}
+
+.tool-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-card);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.tool-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--teal-200);
+  box-shadow: var(--shadow-card-hover);
+}

@@ -1,0 +1,10 @@
+services:
+  hospital-pdf:
+    build: .
+    container_name: hospital-pdf-suite
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      - PORT=8000
+    # Sem volumes persistentes de upload: garante zero retenção de dados (LGPD)
